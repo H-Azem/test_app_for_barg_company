@@ -127,7 +127,7 @@ class HomeView extends StatelessWidget {
                                Padding(
                                  padding: const EdgeInsets.all(2.0),
                                  child: Text(
-                                   '${data[index].name}',
+                                   '${data[index].email}',
                                    style: TextStyle(color: Colors.black),
                                  ),
                                ),
@@ -137,7 +137,7 @@ class HomeView extends StatelessWidget {
                        ),
                        Padding(
                          padding: const EdgeInsets.all(8.0),
-                         child: Text('Address: ${data[index].name}',
+                         child: Text('Address: ${data[index].address}',
                            overflow: TextOverflow.ellipsis,
                          ),
                        )
