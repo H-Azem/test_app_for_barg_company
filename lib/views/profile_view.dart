@@ -15,7 +15,7 @@ class ProfileView extends StatelessWidget {
       children: const [
         CircleAvatar(),
         SizedBox(width: 10,),
-        Text('usfer'),
+        Text('user name'),
       ],
     ),backgroundColor: Colors.amberAccent,foregroundColor: Colors.black,),
       body: Container(
@@ -92,68 +92,61 @@ class ProfileView extends StatelessWidget {
      List<UserModel> data = snapshot.data;
      print(444);
      print(data);
-     return ListView.builder(
-       padding: EdgeInsets.symmetric(horizontal: 8.0),
-       itemCount: data.length,
-       itemBuilder: (context, index) =>
-           Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: InkWell(
-               onTap: (){
-                 controller.goToProfile;
-               },
-               child: Container(
+     return            Padding(
+       padding: const EdgeInsets.all(8.0),
+       child: InkWell(
+         onTap: (){
+           controller.goToProfile;
+         },
+         child: Container(
 
-                 child: Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
-                       Row(
-                         crossAxisAlignment: CrossAxisAlignment.start,
-                         children: [
-                           CircleAvatar(),
-                           Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               Padding(
-                                 padding: const EdgeInsets.all(2.0),
-                                 child: Text(
-                                   '${data[index].name}',
-                                   style: TextStyle(color: Colors.black),
-                                 ),
-                               ),
-                               Padding(
-                                 padding: const EdgeInsets.all(2.0),
-                                 child: Text(
-                                   '${data[index].name}',
-                                   style: TextStyle(color: Colors.black),
-                                 ),
-                               ),
-                             ],
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                 Row(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     CircleAvatar(),
+                     Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         Padding(
+                           padding: const EdgeInsets.all(2.0),
+                           child: Text(
+                             'xxx',
+                             style: TextStyle(color: Colors.black),
                            ),
-                         ],
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.all(8.0),
-                         child: Text('Address: ${data[index].name}',
-                           overflow: TextOverflow.ellipsis,
                          ),
-                       )
-                     ],
-                   ),
-                 ),
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(10),
-                   color: Colors.white,
-                   boxShadow: [
-                     BoxShadow(color: Colors.black, spreadRadius: 1),
+                         Padding(
+                           padding: const EdgeInsets.all(2.0),
+                           child: Text(
+                             'dddd',
+                             style: TextStyle(color: Colors.black),
+                           ),
+                         ),
+                       ],
+                     ),
                    ],
                  ),
-                 height: 97,
-               ),
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Text('Address: s',
+                     overflow: TextOverflow.ellipsis,
+                   ),
+                 )
+               ],
              ),
            ),
-     );
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(10),
+             color: Colors.purple.withOpacity(.5),
+           ),
+           height: 97,
+         ),
+       ),
+     )
+     ;
    } );
 }

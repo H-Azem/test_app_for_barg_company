@@ -34,7 +34,7 @@ class LoginView extends GetView<AuthViewModel> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   controller: controller.usernameController,
-                  onSaved: (value) {
+                  onChanged: (value) {
                     controller.username = value!;
                   },
                   validator: (value) {
@@ -57,7 +57,7 @@ class LoginView extends GetView<AuthViewModel> {
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
                   controller: controller.passwordController,
-                  onSaved: (value) {
+                  onChanged: (value) {
                     controller.password = value!;
                   },
                   validator: (value) {
